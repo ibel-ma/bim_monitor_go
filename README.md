@@ -85,6 +85,19 @@ go build .
 ./graz-bim-monitor "Steyrergasse" --live
 ```
 
+```
+===========================================================================
+  Steyrergasse
+  As of: 18:51:49
+===========================================================================
+ Line                Direction                              Time     Status
+---------------------------------------------------------------------------
+ Straßenbahn  4      Liebenau                               (18:58)  [ 6]
+ Straßenbahn  4      Liebenau                               (19:13)  [21]
+ Straßenbahn  4      Liebenau                               (19:28)  [36]
+===========================================================================
+```
+
 ## Notes
 
 This script uses the HAFAS API at `verkehrsauskunft.verbundlinie.at` and is designed for Graz Linien timetable data. Changes to the API or authentication may require updates.
