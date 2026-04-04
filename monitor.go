@@ -13,8 +13,7 @@ func LiveMonitor(name, lid string, ref int, filter string) {
 	// filter direction
 	departures, _ = filterDepartures(departures, filter)
 
-	// ClearTerminal()
-	fmt.Print("\033[H\033[2J")
+	ClearTerminal()
 	PrintDeparturesLive(name, departures, last)
 
 	for {
@@ -39,8 +38,7 @@ func LiveMonitor(name, lid string, ref int, filter string) {
 			last = time.Now()
 		}
 
-		// ClearTerminal()
-		fmt.Print("\033[H\033[2J")
+		ClearTerminal()
 		PrintDeparturesLive(name, departures, last)
 	}
 }

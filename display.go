@@ -22,8 +22,9 @@ func PrintDepartures(name string, departures []Abfahrt) {
 }
 
 func print_help() {
-	help_text := `
-        graz-bim-monitor [ARGUMENTS]
+	help_text :=
+		`
+        bim_monitor [ARGUMENTS]
         For one arguments the script outputs a departure board for the given location.
         For two arguments the script monitors the departures live. 
         Updates every minute and fetches new data from the API every 5 minutes.
@@ -34,7 +35,7 @@ func print_help() {
 
         Example:
 		go build .
-		./graz-bim-monitor Location direction (optional)
+		./bim_monitor Location direction(optional) flag(optional)
         `
 	fmt.Printf(help_text)
 }
