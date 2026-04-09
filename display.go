@@ -32,9 +32,11 @@ func print_help() {
         Arguments:
         arg1: Location name e.g. "Steyrergasse", "Jakominiplatz"
         arg2: Direction (Optional) depends on line, e.g. "Liebenau"
+		arg3: "--live" Flag to activate live monitoring
 
         Example:
-		go build .
+		go build . (only for building)
+		./bim_monitor (shows help)
 		./bim_monitor Location direction(optional) flag(optional)
         `
 	fmt.Printf(help_text)
