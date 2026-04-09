@@ -33,8 +33,8 @@ func LiveMonitor(name, lid string, ref int, filter string) {
 
 		// Refresh departures if the ref time has passed
 		if time.Since(last) >= time.Duration(ref)*time.Minute {
-			nd, _ := GetDepartures(lid)
-			departures = nd
+			newDepartures, _ := GetDepartures(lid)
+			departures, _ = filterDepartures(newDepartures, filter)
 			last = time.Now()
 		}
 
